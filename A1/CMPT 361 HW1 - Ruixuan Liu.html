@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0060)http://yaksoy.github.io/introvc/assignment1/hw1template.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>CMPT 361 HW1 - Ruixuan Liu</title>
+
+</head> <body>
+
+<h2>CMPT 361 - Homework 1</h2>
+
+<p>Name: <b>Ruixuan Liu</b></p>
+<p>Student No: <b>301383988</b></p>
+<p>Date: Jan 29, 2023</p>
+
+<h4>Honor statement:</h4>
+<p>I have not cheated in any way when doing this assignment, I did it on my own. I may have asked questions about the assignment on Piazza, I know that’s totally fine and even encouraged. I also already know that this class is graded on a curve. I realize that if I cheat and by some miracle not get caught, any increase in my grade will in turn shift the curve and result in lower grades for my classmates. Any undeserved extra grade would come at the cost of all others. That’s horrible! I would never do it.</p>
+
+<h4>1: Take two photographs</h4>
+<img src="HP.png" alt="HP" width="300" height="300">
+<img src="LP.png" alt="LP" width="300" height="300">
+
+
+<h4>2: Compute frequency representations</h4>
+<img src="HP-freq.png" alt="HP-freq" width="300" height="300">
+<img src="LP-freq.png" alt="LP-freq" width="300" height="300">
+
+<h4>3: Visualize kernels</h4>
+<img src="gaus-surf.png" alt="gaus-surf" width="300" height="300">
+<img src="dog-surf.png" alt="dog-surf" width="300" height="300">
+<br><br>
+<img src="HP-filt.png" alt="HP-filt" width="300" height="300">
+<img src="HP-filt-freq.png" alt="HP-filt-freq" width="300" height="300">
+<br><br>
+<img src="LP-filt.png" alt="LP-filt" width="300" height="300">
+<img src="LP-filt-freq.png" alt="LP-filt-freq" width="300" height="300">
+<br><br>
+<img src="HP-dogfilt.png" alt="HP-dogfilt" width="300" height="300">
+<img src="HP-dogfilt-freq.png" alt="HP-dogfilt-freq" width="300" height="300">
+<br><br>
+<img src="LP-dogfilt.png" alt="LP-dogfilt" width="300" height="300">
+<img src="LP-dogfilt-freq.png" alt="LP-dogfilt-freq" width="300" height="300">
+
+<h4>4: Anti-aliasing</h4>
+<img src="HP-sub2.png" alt="HP-sub2" width="300" height="300">
+<img src="HP-sub2-freq.png" alt="HP-sub2-freq" width="300" height="300">
+<br><br>
+<img src="LP-sub2.png" alt="LP-sub2" width="300" height="300">
+<img src="LP-sub2-freq.png" alt="LP-sub2-freq" width="300" height="300">
+<p>I filtered both the high-frequency and low-frequency maps and found that anti-aliasing existed in HP, while in LP the high-frequency noise was filtered, so anti-aliasing was not obvious.</p>
+
+<img src="HP-sub4.png" alt="HP-sub4" width="300" height="300">
+<img src="HP-sub4-freq.png" alt="HP-sub4-freq" width="300" height="300">
+<br><br>
+<img src="LP-sub4.png" alt="LP-sub4" width="300" height="300">
+<img src="LP-sub4-freq.png" alt="LP-sub4-freq" width="300" height="300">
+<p>In 1:4:end, the filtering of high and low frequencies is more pronounced, and the noise in the low frequency map is closer to the center. The image shows more anti-aliasing.</p>
+
+<img src="HP-sub2-aa.png" alt="HP-sub2-aa" width="300" height="300">
+<img src="HP-sub2-aa-freq.png" alt="HP-sub2-aa-freq" width="300" height="300">
+<br><br>
+<img src="HP-sub4-aa.png" alt="HP-sub4-aa" width="300" height="300">
+<img src="HP-sub4-aa-freq.png" alt="HP-sub4-aa-freq" width="300" height="300">
+<p>I used a standard deviation of 2 for the 1:2:end Gaussian filter and a standard deviation of 5 for the 1:4:end Gaussian filter. i found that the higher the standard deviation, the more blurred the image became. the high frequencies in the HP were drastically reduced. Compared to the version without anti-aliasing, the frequencies are noisier.</p>
+
+<h4>5: Canny edge detection thresholding</h4>
+
+<img src="HP-canny-optimal.png" alt="HP-canny-optimal" width="500" height="500">
+<br><br>
+<img src="HP-canny-lowlow.png" alt=" HP-canny-lowlow" width="300" height="300">
+<img src="HP-canny-highlow.png" alt=" HP-canny-highlow" width="300" height="300">
+<br><br>
+<img src="HP-canny-lowhigh.png" alt=" HP-canny-lowhigh" width="300" height="300">
+<img src="HP-canny-highhigh.png" alt=" HP-canny-highhigh" width="300" height="300">
+<p>The best threshold I use for canny edge detection is [0.0375,0.0938], low-low is [0.001,0.01], high-high is [0.012,0.21], high-low is [0.012,0.21], and low-high is [0.02,0.03]. I think this is the most appropriate image for the HP edge detection representation, which depicts objects such as bottles and electric razors.</p>
+
+<img src="LP-canny-optimal.png" alt="LP-canny-optimal" width="500" height="500">
+<br><br>
+<img src="LP-canny-lowlow.png" alt=" LP-canny-lowlow" width="300" height="300">
+<img src="LP-canny-highlow.png" alt=" LP-canny-highlow" width="300" height="300">
+<br><br>
+<img src="LP-canny-lowhigh.png" alt=" LP-canny-lowhigh" width="300" height="300">
+<img src="LP-canny-highhigh.png" alt=" LP-canny-highhigh" width="300" height="300">
+<p>My best threshold for edge detection with canny on the bed sheet photo is [0.0313,0.0781], low-low is [0.0008,0.01], high-high is [0.15,0.3], high-low is [0.09,0.15], and low-high is [0.02,0.026]. I think this is not the most appropriate image for HP edge detection representation, it does not show the smoothness of the bed sheet. I think high-low is the best because it shows the pattern on the bed sheet and the folds are distinguished from the flat surfaces.</p>
+
+
+ </body></html>
